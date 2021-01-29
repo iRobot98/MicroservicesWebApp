@@ -12,14 +12,18 @@ services:
       - db
 
   db: 
-    image: mysql:yuzitongyi/mysql5.7-python3.7
-    restart: always
-    environment: 
-      MYSQL_DATABASE: admin
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-      MYSQL_ROOT_PASSWORD: root
-    volumes: 
-      - .dbdata:/var/lib/mysql
-    ports: 
+    image: mysql:5.7.22
+    # container_name: mysql
+    restart: unless-stopped
+    tty: true
+    expose:
+      - 3306
+    ports:
       - 33066:3306
+    volumes:
+      - /my/own/datadir:/var/lib/mysql
+    environment:
+      MYSQL_USERNAME: "root"
+      MYSQL_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "admin"
