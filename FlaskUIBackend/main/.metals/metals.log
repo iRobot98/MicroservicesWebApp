@@ -1,0 +1,4 @@
+[0m2021.01.30 23:03:32 INFO  Started: Metals version 0.9.10 in workspace 'D:\pythonPractice\MicroServicesWebAppWithReactDjangoFlask\FlaskUIBackend\main' for client vscode 1.52.1.[0m
+[0m2021.01.30 23:03:33 INFO  time: initialize in 0.85s[0m
+[0m2021.01.30 23:03:44 WARN  Build server is not auto-connectable.[0m
+[0m2021.01.30 23:03:44 WARN  no build tool detected in workspace 'D:\pythonPractice\MicroServicesWebAppWithReactDjangoFlask\FlaskUIBackend\main'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
