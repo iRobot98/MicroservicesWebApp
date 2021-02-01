@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    
     ports:
       - 8001:5000
     volumes:
@@ -20,9 +21,9 @@ services:
       - 3306
     ports:
       - 33067:3306
-    command: --init-file /data/application/init.sql
+   
     volumes:
-      - ./init.sql:/data/application/init.sql
+     
       - .dbdata:/var/lib/mysql
     environment:
       MYSQL_USERNAME: "root"
